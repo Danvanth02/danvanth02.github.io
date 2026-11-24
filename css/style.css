@@ -1,0 +1,117 @@
+/* style.css - shared styles for all pages.
+   Palette: white, forest green, gold. Change the variables once and the whole site updates.
+   Text/background pairs meet WCAG AA contrast (4.5:1 or better). */
+:root{
+  --white:#FFFFFF; --mist:#F1F7F3; --forest:#0E3B2E; --forest-2:#16553F; --leaf:#1F7A56;
+  --gold:#D4A62F; --gold-deep:#835C0A; --gold-soft:#F8EDCB;
+  --ink:#16211C; --muted:#4A5A52; --line:#D3E1D8;
+  --error:#A4161A; --ok:#0B6B3A; --focus:#0B5FFF;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;font:1.0625rem/1.65 var(--sans);color:var(--ink);background:var(--white)}
+h1,h2,h3{font-family:var(--serif);color:var(--forest);line-height:1.15;margin:0 0 .5em;font-weight:700}
+h1{font-size:clamp(2.4rem,6vw,4rem);letter-spacing:-.02em} h2{font-size:clamp(1.6rem,3.5vw,2.1rem)} h3{font-size:1.25rem}
+p,ul,ol,dl{margin:0 0 1em;max-width:66ch}
+a{color:var(--forest-2);text-underline-offset:3px}
+a:hover{text-decoration-thickness:3px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.skip-link{position:absolute;left:1rem;top:-4rem;background:var(--forest);color:#fff;padding:.75rem 1rem;z-index:20;border-radius:0 0 6px 6px}
+.skip-link:focus{top:0}
+.wrap{width:min(100% - 2.5rem,66rem);margin-inline:auto}
+main section{padding-block:3.5rem}
+/* Header */
+.site-header{background:var(--white);border-top:5px solid var(--gold);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.25rem 2rem;padding-block:.6rem}
+.brand{display:inline-flex;align-items:center;gap:.6rem;font:700 1.3rem var(--serif);color:var(--forest);text-decoration:none}
+.brand::before{content:"";width:.9rem;height:.9rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px var(--forest)}
+.nav-list{display:flex;flex-wrap:wrap;gap:.25rem;list-style:none;margin:0;padding:0;max-width:none}
+.nav-list a{display:inline-block;min-height:44px;padding:.6rem 1rem;text-decoration:none;color:var(--ink);font-weight:500;border-radius:999px}
+.nav-list a:hover{background:var(--mist)}
+.nav-list a[aria-current="page"]{background:var(--forest);color:#fff;font-weight:600}
+/* Buttons */
+.btn{display:inline-block;min-height:46px;padding:.7rem 1.5rem;font:600 1rem var(--sans);text-decoration:none;border:2px solid var(--forest);background:var(--forest);color:#fff;border-radius:999px;cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:var(--leaf);border-color:var(--leaf)}
+.btn.alt{background:transparent;color:var(--forest)}
+.btn.alt:hover{background:var(--mist);border-color:var(--forest)}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:var(--forest)}
+.btn.gold:hover{background:#E4B94A;border-color:#E4B94A}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.75rem}
+/* Home hero */
+.hero{background:linear-gradient(180deg,var(--white) 0%,var(--mist) 100%)}
+.hero .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:3rem}
+.hero .wrap>div{flex:1 1 24rem}
+.hero h1{margin-bottom:.3em}
+.hero .title{font:600 1.3rem var(--serif);color:var(--gold-deep);margin-bottom:1em}
+.portrait{flex:0 0 auto;width:min(100%,19rem);height:auto;aspect-ratio:1;object-fit:cover;border-radius:10rem 10rem 1.5rem 1.5rem;border:6px solid var(--white);background:var(--gold-soft);box-shadow:0 0 0 4px var(--gold),18px 18px 0 4px var(--forest)}
+/* Dark feature band */
+.band-dark{background:var(--forest);color:#fff}
+.band-dark h2{color:#fff}
+.band-dark .card{background:var(--forest-2);border:1px solid rgba(255,255,255,.18);border-top:5px solid var(--gold);color:#fff}
+.band-dark .card h3{color:var(--gold-soft)}
+.band-dark .card:hover{border-color:var(--gold)}
+.band-dark .card p{margin:0}
+/* Cards */
+.cards{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr))}
+.card{background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:border-color .2s,box-shadow .2s}
+.card:hover,.card:focus-within{border-color:var(--leaf);box-shadow:0 10px 24px rgba(14,59,46,.12)}
+.card>div{padding:1.4rem}
+.card img{display:block;width:100%;height:auto;background:var(--forest)}
+.card h2,.card h3{margin-bottom:.4em}
+.card .links{display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0 0}
+.card .links .btn{min-height:42px;padding:.5rem 1.1rem;font-size:.95rem}
+.tags{display:flex;flex-wrap:wrap;gap:.45rem;list-style:none;padding:0}
+.tags li{background:var(--gold-soft);color:#5C4107;padding:.2rem .75rem;border-radius:999px;font-size:.9rem;font-weight:600}
+/* Inner page heading and bands */
+.page-head{background:var(--mist);border-bottom:1px solid var(--line)}
+.page-head h1{font-size:clamp(2.1rem,5vw,3.2rem);padding-left:1rem;border-left:8px solid var(--gold);margin-bottom:.4em}
+.page-head p{margin:0;padding-left:calc(1rem + 8px);color:var(--muted)}
+main .page-head{padding-block:3rem}
+.band{background:var(--mist)}
+dl.facts{display:grid;grid-template-columns:max-content 1fr;gap:.6rem 2rem;background:var(--white);border:1px solid var(--line);border-left:6px solid var(--gold);border-radius:12px;padding:1.5rem;max-width:36rem}
+dl.facts dt{font-weight:700;color:var(--forest)} dl.facts dd{margin:0}
+/* Education timeline */
+.timeline{list-style:none;margin:0 0 1em;padding:0 0 0 .6rem;border-left:3px solid var(--line);max-width:66ch}
+.timeline li{position:relative;padding:0 0 1.75rem 1.6rem}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{content:"";position:absolute;left:-1.3rem;top:.3rem;width:1rem;height:1rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px var(--white),0 0 0 6px var(--gold)}
+.timeline li:first-child::before{background:var(--leaf);box-shadow:0 0 0 4px var(--white),0 0 0 6px var(--leaf)}
+.timeline h3{margin-bottom:.15em}
+.timeline p{margin-bottom:.2em}
+.timeline .meta{color:var(--gold-deep);font-weight:700}
+/* Skills */
+.skill{margin-bottom:1.4rem;max-width:36rem}
+.skill label{display:flex;justify-content:space-between;gap:1rem;font-weight:600;margin-bottom:.35rem}
+.skill label span+span{color:var(--gold-deep)}
+progress{display:block;width:100%;height:.9rem;border:0;border-radius:999px;background:#DCE9E0;overflow:hidden;-webkit-appearance:none;appearance:none}
+progress::-webkit-progress-bar{background:#DCE9E0;border-radius:999px}
+progress::-webkit-progress-value{background:var(--leaf);border-radius:999px}
+progress::-moz-progress-bar{background:var(--leaf);border-radius:999px}
+/* Contact form */
+.form-grid{display:grid;gap:1.25rem;max-width:36rem}
+.field label{display:block;font-weight:700;margin-bottom:.3rem;color:var(--forest)}
+.hint{color:var(--muted);font-size:.95rem;margin:0 0 .3rem}
+input,textarea{width:100%;font:inherit;padding:.75rem .9rem;border:2px solid var(--muted);border-radius:10px;background:#fff;color:var(--ink)}
+input:focus,textarea:focus{border-color:var(--leaf)}
+input[aria-invalid="true"],textarea[aria-invalid="true"]{border-color:var(--error);border-width:3px}
+.error{color:var(--error);font-weight:700;margin:.3rem 0 0}
+.error:empty{display:none}
+.error-summary,.success{border:3px solid;padding:1rem;border-radius:10px;margin-bottom:1.25rem;max-width:36rem}
+.error-summary{border-color:var(--error);color:#6E0F12;background:#FDF0F0}
+.success{border-color:var(--ok);color:#06401F;background:#EAF7EF}
+.error-summary:empty,.success:empty{display:none}
+.contact-layout{display:grid;gap:2.5rem}
+@media (min-width:56rem){.contact-layout{grid-template-columns:1.4fr 1fr}}
+aside.reach{background:var(--mist);border:1px solid var(--line);border-top:5px solid var(--gold);border-radius:14px;padding:1.5rem;align-self:start}
+aside.reach ul{padding-left:1.2rem;margin:0}
+aside.reach li{margin-bottom:.5rem}
+/* Footer */
+.site-footer{background:var(--forest);color:#fff;padding-block:2rem;border-top:5px solid var(--gold)}
+.site-footer a{color:var(--gold-soft)}
+.site-footer a:hover{color:#fff}
+.site-footer :focus-visible{outline-color:var(--gold)}
+.site-footer ul{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;list-style:none;padding:0;margin:0 0 .75rem;max-width:none}
+.site-footer p{margin:0;max-width:none}

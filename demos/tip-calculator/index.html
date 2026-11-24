@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tip Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<a class="back" href="../../projects.html">&larr; Back to portfolio</a>
+<h1>Tip Calculator</h1>
+<p>Enter the bill, choose a tip and split it between people.</p>
+<form id="form" novalidate>
+<div class="field"><label for="bill">Bill amount (&#8377;)</label><input id="bill" type="number" min="0" step="0.01" inputmode="decimal"></div>
+<div class="field"><label for="tip">Tip</label>
+<select id="tip"><option value="5">5%</option><option value="10">10%</option><option value="15" selected>15%</option><option value="18">18%</option><option value="20">20%</option></select></div>
+<div class="field"><label for="people">Number of people</label><input id="people" type="number" min="1" step="1" value="1"></div>
+<button class="btn" type="submit">Calculate</button>
+</form>
+<p id="error" class="msg bad" role="alert"></p>
+<div class="result" aria-live="polite"><span id="line">Your result will appear here.</span><strong id="each"></strong></div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

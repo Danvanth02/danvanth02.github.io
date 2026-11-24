@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>To-Do List</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<a class="back" href="../../projects.html">&larr; Back to portfolio</a>
+<h1>To-Do List</h1>
+<p>Add a task, tick it off when done, or delete it. Tasks are saved in this browser.</p>
+<form id="form" class="row">
+<div><label for="task">New task</label><input id="task" type="text" autocomplete="off"></div>
+<button class="btn" type="submit">Add task</button>
+</form>
+<p id="status" class="msg" role="status"></p>
+<ul id="list" class="list" aria-label="Tasks"></ul>
+<p id="empty">No tasks yet. Add your first one above.</p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+:root{--paper:#F1F7F3;--ink:#16211C;--muted:#4A5A52;--teal:#0E3B2E;--soft:#E3EFE7;--gold:#D4A62F;--line:#D3E1D8;--error:#A4161A;--ok:#0B6B3A;--focus:#0B5FFF}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font:1.0625rem/1.6 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--paper)}
+main{width:min(100% - 2rem,34rem);margin:2rem auto;background:#fff;border:1px solid var(--line);border-top:6px solid var(--gold);border-radius:14px;padding:1.75rem}
+h1{font-family:Georgia,serif;color:var(--teal);margin:0 0 .25em}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+label,legend{font-weight:700}
+input,select,button{font:inherit}
+input[type=text],input[type=number],select{width:100%;padding:.7rem;border:2px solid var(--muted);border-radius:6px;background:#fff;color:var(--ink)}
+.btn{min-height:44px;padding:.6rem 1.3rem;font-weight:700;border:2px solid var(--teal);background:var(--teal);color:#fff;border-radius:999px;cursor:pointer}
+.btn.alt{background:transparent;color:var(--teal)}
+.row{display:flex;gap:.5rem;align-items:flex-end;flex-wrap:wrap}.row>div{flex:1 1 12rem}
+.field{margin-bottom:1rem}
+.msg{min-height:1.6em;font-weight:700;color:var(--ok)}.msg.bad{color:var(--error)}
+ul.list{list-style:none;padding:0;margin:1rem 0}
+ul.list li{display:flex;align-items:center;gap:.75rem;padding:.6rem .75rem;background:#fff;border:2px solid var(--line);border-radius:6px;margin-bottom:.5rem}
+ul.list li label{flex:1;font-weight:400}
+.done{text-decoration:line-through;color:var(--muted)}
+.result strong{color:var(--gold)}
+.back{display:inline-block;margin-bottom:1rem}
+.result{background:var(--teal);color:#fff;border-radius:8px;padding:1rem 1.25rem;margin-top:1rem}
+.result strong{font-size:1.8rem;display:block}
+fieldset{border:2px solid var(--line);border-radius:8px;padding:1rem;margin:0 0 1rem}
+fieldset label{display:block;font-weight:400;padding:.4rem 0}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+body{background:#EAF3EE}
+main{background:#fff;border-top:6px solid #C9A227;border-radius:12px;padding:1.5rem;box-shadow:0 8px 24px rgba(15,76,58,.12)}
+.result strong{color:#E3B93C}

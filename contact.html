@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Danvanth P S</title>
+<meta name="description" content="Contact Danvanth P S using the accessible contact form, phone, email or social media links.">
+<meta name="robots" content="index, follow">
+<!-- DEPLOYMENT PLACEHOLDER: replace YOUR-DOMAIN.example in the canonical and Open Graph URLs -->
+<link rel="canonical" href="https://YOUR-DOMAIN.example/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact | Danvanth P S">
+<meta property="og:description" content="Contact Danvanth P S using the accessible contact form, phone, email or social media links.">
+<meta property="og:url" content="https://YOUR-DOMAIN.example/contact.html">
+<meta property="og:image" content="https://YOUR-DOMAIN.example/images/profile.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+<div class="wrap">
+<a class="brand" href="index.html">Danvanth P S</a>
+<nav aria-label="Main"><ul class="nav-list"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="skills.html">Skills</a></li><li><a href="contact.html" aria-current="page">Contact</a></li></ul></nav>
+</div>
+</header>
+<main id="main">
+<section class="page-head" aria-labelledby="ct-title"><div class="wrap">
+<h1 id="ct-title">Contact me</h1>
+<p>Send a message, or reach me directly using the details on the right.</p>
+</div></section>
+<section aria-label="Contact details and form"><div class="wrap">
+<div class="contact-layout">
+<div>
+<p>All fields are required. I will reply to your message by email.</p>
+<div id="error-summary" class="error-summary" tabindex="-1" role="alert"></div>
+<div id="success-message" class="success" role="status"></div>
+<form id="contact-form" class="form-grid" novalidate>
+<div class="field"><label for="name">Name (required)</label>
+<input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error"><p id="name-error" class="error"></p></div>
+<div class="field"><label for="email">Email (required)</label>
+<p class="hint" id="email-hint">Example: name@example.com</p>
+<input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-hint email-error"><p id="email-error" class="error"></p></div>
+<div class="field"><label for="subject">Subject (required)</label>
+<input id="subject" name="subject" type="text" required aria-describedby="subject-error"><p id="subject-error" class="error"></p></div>
+<div class="field"><label for="message">Message (required)</label>
+<textarea id="message" name="message" rows="6" required aria-describedby="message-error"></textarea><p id="message-error" class="error"></p></div>
+<div><button class="btn" type="submit">Send message</button></div>
+</form>
+</div>
+<aside class="reach" aria-labelledby="other-title">
+<h2 id="other-title">Other ways to reach me</h2>
+<ul><li><a href="tel:+919443062551">Phone: +91 94430 62551</a></li>
+<li><a href="mailto:danvanthsubash@gmail.com">danvanthsubash@gmail.com</a></li>
+<li><a href="https://github.com/Danvanth02">GitHub profile</a></li>
+<li><a href="https://www.linkedin.com/in/your-username">LinkedIn profile</a></li></ul>
+</aside>
+</div>
+</div></section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<nav aria-label="Footer"><ul>
+<li><a href="mailto:danvanthsubash@gmail.com">Email</a></li>
+<li><a href="tel:+919443062551">Phone</a></li>
+<li><a href="https://github.com/Danvanth02">GitHub</a></li>
+<li><a href="https://www.linkedin.com/in/your-username">LinkedIn</a></li>
+</ul></nav>
+<p>&copy; 2026 Danvanth P S.</p>
+</div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
